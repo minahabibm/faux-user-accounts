@@ -22,14 +22,14 @@ app.post('/sendfeedback', (req, res) => {
     console.log("POST Request @sendfeedback")
     db.addFeedBack(req.body.name, req.body.email, req.body.feedback)
     .then(resp => {
-        email.sendEmail(req.body.name, req.body.email, req.body.feedback)
-        .then(respo => {
-            res.sendStatus(200);
-        })
-        .catch(err => {
-            console.log(err);
-            res.sendStatus(500);
-        })
+      email.sendEmail(req.body.name, req.body.email, req.body.feedback)
+      .then(respo => {
+        res.sendStatus(200);
+      })
+      .catch(err => {
+        console.log(err);
+        res.sendStatus(500);
+      })
     })
     .catch(err => {
       console.log(err);
