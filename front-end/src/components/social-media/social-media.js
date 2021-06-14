@@ -5,11 +5,10 @@ import sprite from '../../assets/svg-sprite.svg';
 
 
 export default function SocialMedia() {
-  console.log('--social-media');
 
   const renderButton = ( name, url) => {
     return (
-      <div className={"svgDiv"} onClick={() => console.log("hello world")}>
+      <div className={"svgDiv"}>
         <a
           href={url}
           rel="noopener noreferrer"

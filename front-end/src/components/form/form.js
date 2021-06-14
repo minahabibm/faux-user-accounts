@@ -32,7 +32,6 @@ export default function Form() {
       ...values, 
       [target]: event.target.value
     }));
-    console.log(formInfo)
   };
 
   const handleSubmit = (e) => {
@@ -47,7 +46,11 @@ export default function Form() {
         setSubmitted(true);
         setValidateNameError(false);
         setShowError(false);
-        console.log(res)
+        setFormInfo({
+          name: '',
+          email: '',
+          feedback: '',
+        })
       })
       .catch(err => {
         setValidateNameError(false);
