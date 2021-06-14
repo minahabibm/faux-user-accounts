@@ -1,0 +1,41 @@
+.socailMediaDiv {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.svgDiv {
+    transform: scale(1);
+}
+.svgDiv:active {
+    transform: scale(0.89);
+}
+
+.svgSizeSocialMedia {
+    width: 0.75em;
+    height: 0.75em;
+}
+@media (min-width: 768px){
+    .socailMediaDiv {
+        padding-top: 1%;
+        padding-bottom: 1%;
+    }
+    .svgSizeSocialMedia {
+        width: 1.75em;
+        height: 1.75em;
+    }
+}
+
+@media (min-width: 768px ) and (min-height: 1100px){
+    .socailMediaDiv {
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+    .svgSizeSocialMedia {
+        width: 2.5em;
+        height: 2.5em;
+    }
+}

@@ -1,0 +1,55 @@
+.profilePicDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageDiv {
+    height: 7rem;
+    width: 7rem;  
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1B3D50;    
+}
+
+.circleImageLayout {
+    height: 6.75rem;
+    width: 6.75rem;
+    border-radius: 50%;
+}
+
+
+@media (min-width: 768px){
+    .imageDiv {
+        height: 10rem;
+        width: 10rem;    
+    }
+    .circleImageLayout {
+        height: 9.75rem;
+        width: 9.75rem;
+    }
+}
+
+@media (min-width: 768px ) and (min-height: 800px){
+    .imageDiv {
+        height: 12rem;
+        width: 12rem;    
+    }
+    .circleImageLayout {
+        height: 11.75rem;
+        width: 11.75rem;
+    }
+}
+
+@media (min-width: 768px ) and (min-height: 1100px){
+    .imageDiv {
+        height: 15rem;
+        width: 15rem;    
+    }
+    .circleImageLayout {
+        height: 14.75rem;
+        width: 14.75rem;
+    }
+}
