@@ -2,6 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 var cors = require('cors');
 const db = require('./db_queries');
+const email = require('./email_handler');
 
 const app = express();
 dotenv.config();
@@ -21,11 +22,18 @@ app.post('/sendfeedback', (req, res) => {
     console.log("POST Request @sendfeedback")
     db.addFeedBack(req.body.name, req.body.email, req.body.feedback)
     .then(resp => {
-        res.sendStatus(200)
+        email.sendEmail(req.body.name, req.body.email, req.body.feedback)
+        .then(respo => {
+            res.sendStatus(200);
+        })
+        .catch(err => {
+            console.log(err);
+            res.sendStatus(500);
+        })
     })
     .catch(err => {
-      console.log(err)
-      res.sendStatus(500)
+      console.log(err);
+      res.sendStatus(500);
     })
 });
 
